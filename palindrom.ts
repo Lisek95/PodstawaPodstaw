@@ -10,7 +10,8 @@ function palindrom(str: string) // funkcja palindrom
       console.log(`${str} ≠ palindrom`); // fałsz ≠ palindrom
   }
 }
+const test1: string = 'kbk'; // słowo
+const test2: string = 'Czołg'; // słowo
 
-const test: string = 'kbk'; // słowo
-
-palindrom(test); // wyświetla wynik
+palindrom(test1); // wyświetla wynik
+palindrom(test2); // wyświetla wynik
