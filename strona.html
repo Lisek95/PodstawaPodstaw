@@ -4,7 +4,12 @@
 <head>
 <meta charset="utf-8" />
 <title>GrupaLisa strona testowa</title>
-GRDL
+
+	<audio id="bg_music" class="audio" autoplay controls loop>
+	<source src="alarm.mp3" type="audio/mp3" />
+	</audio>
+	
+	GRDL
     <script>
         function zegarek()
         {
@@ -17,6 +22,8 @@ GRDL
             var miesiac = data.getMonth();
             var rok = data.getFullYear();
 			var a;
+			var misja;
+			
 			 
            
             if (minuta < 10) minuta = "0" + minuta;
@@ -28,17 +35,27 @@ GRDL
             var pokazDate = "Dzisiaj jest " + dni[dzienN] + ', ' + dzien + ' ' + miesiace[miesiac] + ' ' + rok + " roku.<br />Godzina " + godzina + ':' + minuta + ':' + sekunda;
             document.getElementById("zegar").innerHTML = pokazDate;
 			
-			a = (Math.floor(Math.random()*10+1)); 
+			a = (Math.floor(Math.random()*5+1)); 
 			console.log(a);
 					if((a==1))
 			{
-			confirm("Test zakończony pomyślnie");
+			
+			//confirm("Test zakończony pomyślnie");
+			misja=1; 
+			
 			}
+			else 
+			{ misja=0 }
            
             setTimeout(zegarek, 1000);
-
+			
+				if((misja==1))
+			{
+				confirm("Test zakończony pomyślnie");
+			}	
             
-        }        
+        }      
+	
     </script>
 </head>
 
